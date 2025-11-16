@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background: #415b5e;
+  color: #fff;
+}
+/* background style */
+#header {
+  width: 100;
+  height: 100vh;
+  background-image: url(../images/backgorund-modified.png);
+  background-size: cover;
+  background-position: center;
+}
+/* background style */
+
+/* nav style */
+.container {
+  padding: 10px 10%;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.logo {
+  width: 140px;
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #db722d;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+nav ul li a:hover::after {
+  width: 100%;
+}
+/* nav style */
+/* header-text style*/
+.header-text {
+  direction: rtl;
+  text-align: right;
+  margin-top: 20%;
+  font-size: 30px;
+}
+.header-text h1 {
+  font-size: 50px;
+  margin: 20px;
+}
+.header-text h1 span {
+  color: #db722d;
+}
+/* header-text style*/
+
+/* about sytyle */
+#about {
+  padding: 80px 0;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.about-col-1 {
+  flex-basis: 35%;
+}
+.about-col-1 img {
+  width: 100%;
+  border-radius: 15px;
+}
+.about-col-2 {
+  direction: rtl;
+  text-align: right;
+}
+.sub-title {
+  font-size: 60px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #db722d;
+  direction: rtl;
+  text-align: right;
+}
+.about-col-2 p {
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 45px;
+}
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+}
+.tab-links {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+.tab-links::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #db722d;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+.tab-links.active-link::after {
+  width: 50%;
+}
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+.tab-contents ul li span {
+  color: #db722d;
+  font-size: 14px;
+}
+.tab-contents {
+  display: none;
+}
+.tab-contents.active-tab {
+  display: block;
+}
+/* about sytyle */
+
+/* services */
+#services {
+  padding: 30px 0;
+}
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  direction: rtl;
+  text-align: right;
+}
+.services-list div {
+  background: #262626;
+  padding: 40px;
+  margin: 20px;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 10px;
+  transition: background 0.5s, transform 0.5s;
+}
+.services-list div i {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.services-list div h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.services-list div a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
+}
+.services-list div:hover {
+  background: #db722d;
+  transform: translateY(-10px);
+}
+/* services */
+
+/* contact */
+.contact-title {
+  font-size: 60px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #db722d;
+  direction: rtl;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 90px;
+}
+.contact-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#contact .contact-body .booking {
+  display: inline-block;
+  text-decoration: none;
+  background: #262626;
+  font-size: 30px;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 25px;
+  transition: 0.3s ease;
+  margin-bottom: 30px;
+  direction: rtl;
+}
+
+#contact .contact-body .booking:hover {
+  background: #db722d;
+  transform: scale(1.07);
+}
+#contact .contact-body .social-media-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 25%;
+  margin-bottom: 50px;
+}
+#contact .contact-body .social-media-icons a {
+  font-size: 30px;
+  color: white;
+  transition: 0.3s ease;
+}
+#contact .contact-body .social-media-icons a:hover {
+  color: #db722d;
+  transform: scale(1.2);
+}
+
+/* css small screens */
+nav .fa-regular {
+  display: none;
+}
+nav .fa-solid {
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  #header {
+    background-image: url(../images/phone-background.png);
+  }
+  nav .fa-regular {
+    display: block;
+    font-size: 25px;
+  }
+  nav .fa-solid {
+    display: block;
+    font-size: 25px;
+  }
+  nav ul{
+    background: #db722d;
+    position: fixed;
+    top: 0;
+    right: -150px;
+    width: 150px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s; 
+  }
+  nav ul li{
+    display: block;
+    margin: 25px;
+  }
+  nav ul .fa-regular{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+}
